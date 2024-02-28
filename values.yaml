@@ -1,7 +1,7 @@
 flink:
   image: flink:1.18
   version: v1_18
-  name: &flink-name flink-session-cluster
+  name: flink-session-cluster
   jobManager:
     resource:
       memory: "2048m"
@@ -28,4 +28,4 @@ global:
     ingressGateway:
       namespace: istio-ingress
 
-subDomain: *flink-name
+subDomain: flink-session-cluster-rest
