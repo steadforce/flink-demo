@@ -19,5 +19,5 @@ spec:
     - destination:
         host: {{ .Values.subDomain }}
         port:
-          number: 8080
+          number: 8081
 {{- end }}
