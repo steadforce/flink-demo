@@ -2,7 +2,7 @@
 apiVersion: flink.apache.org/v1beta1
 kind: FlinkDeployment
 metadata:
-  name: flink-deployment
+  name: {{ .Values.flink.name }}
 spec:
   image: {{ .Values.flink.image }}
   flinkVersion: {{ .Values.flink.version }}

@@ -1,6 +1,7 @@
 flink:
   image: flink:1.18
   version: v1_18
+  name: &flink-name flink-session-cluster
   jobManager:
     resource:
       memory: "2048m"
@@ -19,4 +20,5 @@ flink:
       name: flink
     roleBinding:
       name: flink
-    
+
+subDomain: *flink-name

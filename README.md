@@ -19,6 +19,8 @@ The following command renders the charts like argo-cd does to validate the conte
 ```
  helm template --release-name flink-demo -n flink-demo --skip-tests \
   -a flink.apache.org/v1beta1 \
+  -a networking.istio.io/v1beta1 \
+  -a forecastle.stakater.com/v1alpha1 \
   --output-dir _render/local . 
 ```
 
