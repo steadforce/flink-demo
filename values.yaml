@@ -1,0 +1,11 @@
+flink:
+  image: flink:1.18
+  version: v1_18
+  jobManager:
+    resource:
+      memory: "2048m"
+      cpu: 1
+  taskManager:
+    resource:
+      memory: "2048m"
+      cpu: 1
