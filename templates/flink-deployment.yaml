@@ -2,14 +2,12 @@
 apiVersion: flink.apache.org/v1beta1
 kind: FlinkDeployment
 metadata:
-  namespace: default
   name: flink-deployment
 spec:
   image: {{ .Values.flink.image }}
   flinkVersion: {{ .Values.flink.version }}
   flinkConfiguration:
     taskmanager.numberOfTaskSlots: "2"
-  serviceAccount: flink
   jobManager:
     resource:
     {{- toYaml .Values.flink.jobManager.resource | nindent 6}}
