@@ -8,5 +8,5 @@ spec:
   job:
     jarURI: {{ .Values.flink.job.uri}}
     parallelism:  {{ .Values.flink.job.parallelism}}
-    upgradeMode: stateless
+    upgradeMode: {{ .Values.flink.job.upgradeMode}}
 {{- end }}
