@@ -4,12 +4,12 @@ flink:
   name: flink-session-cluster
   jobManager:
     resource:
-      memory: ~
-      cpu: ~
+      memory: "0m"
+      cpu: 0
   taskManager:
     resource:
-      memory: ~
-      cpu: ~
+      memory: "0m"
+      cpu: 0
   rbac:
     labels:
       app.kubernetes.io/name: flink-kubernetes-operator
