@@ -28,4 +28,4 @@ global:
     ingressGateway:
       namespace: istio-ingress
 
-subDomain: flink-session-cluster-rest
+subDomain: flink

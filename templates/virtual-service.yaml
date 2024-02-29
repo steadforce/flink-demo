@@ -17,7 +17,7 @@ spec:
           strict-transport-security: max-age=15724800
     route:
     - destination:
-        host: {{ .Values.subDomain }}
+        host: {{ .Values.flink.name }}-rest
         port:
           number: 8081
 {{- end }}
