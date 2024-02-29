@@ -1,0 +1,12 @@
+{{- if .Capabilities.APIVersions.Has "flink.apache.org/v1beta1" }}
+apiVersion: flink.apache.org/v1beta1
+kind: FlinkSessionJob
+metadata:
+  name: {{ .Values.flink.job.name }}
+spec:
+  deploymentName: {{ .Values.flink.name }}
+  job:
+    jarURI: {{ .Values.flink.job.uri}}
+    parallelism:  {{ .Values.flink.job.parallelism}}
+    upgradeMode: stateless
+{{- end }}

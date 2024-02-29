@@ -4,12 +4,12 @@ flink:
   name: flink-session-cluster
   jobManager:
     resource:
-      memory: "2048m"
-      cpu: 1
+      memory: ~
+      cpu: ~
   taskManager:
     resource:
-      memory: "2048m"
-      cpu: 1
+      memory: ~
+      cpu: ~
   rbac:
     labels:
       app.kubernetes.io/name: flink-kubernetes-operator
@@ -20,6 +20,11 @@ flink:
       name: flink
     roleBinding:
       name: flink
+  job:
+    name: kafka-to-iceberg-job
+    uri: https://github.com/steadforce/flink-job/releases/download/9/flink_job-1.0-SNAPSHOT.jar
+    parallelism: 1
+    upgradeMode: stateless
 
 global:
   acme:
