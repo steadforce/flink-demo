@@ -1,0 +1,13 @@
+{{- if .Capabilities.APIVersions.Has "networking.istio.io/v1beta1" }}
+apiVersion: networking.istio.io/v1beta1
+kind: Sidecar
+metadata:
+  name: default
+spec:
+  egress:
+  - hosts:
+    - "./*"
+    - "istio-system/*"
+    - "nessie/*"
+    - "minio/*"
+{{ end }}
