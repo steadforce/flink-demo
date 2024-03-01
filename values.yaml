@@ -26,9 +26,9 @@ flink:
     parallelism: 1
     upgradeMode: stateless
     args:
-    - NESSIE_HOST=http://nessie.nessie.svc.cluster.local:19120/api/v1
-    - MINIO_HOST=http://minio.minio.svc.cluster.local:80
-    - WAREHOUSE=s3a://sensor/flink
+    - --NESSIE_HOST http://nessie.nessie.svc.cluster.local:19120/api/v1
+    - --MINIO_HOST http://minio.minio.svc.cluster.local:80
+    - --WAREHOUSE s3a://sensor/flink
 
 global:
   acme:
