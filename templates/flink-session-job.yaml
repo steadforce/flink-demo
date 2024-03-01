@@ -9,4 +9,6 @@ spec:
     jarURI: {{ .Values.flink.job.uri}}
     parallelism:  {{ .Values.flink.job.parallelism}}
     upgradeMode: {{ .Values.flink.job.upgradeMode}}
+    args: 
+    {{- toYaml .Values.flink.job.args | nindent 6 }}
 {{- end }}
