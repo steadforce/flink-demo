@@ -14,8 +14,10 @@ spec:
       containers:
         - name: flink-main-container
           env:
-            - name: ENABLE_BUILT_IN_PLUGINS
-              value: flink-s3-fs-hadoop-1.18.1.jar
+             {{- range $name, $item := .Values.flink.env }}
+            - name: {{ $name }}
+              {{- $item | toYaml | nindent 14 }}
+            {{- end }}
   jobManager:
     resource:
     {{- toYaml .Values.flink.jobManager.resource | nindent 6}}
