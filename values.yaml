@@ -11,7 +11,8 @@ flink:
       memory: "2048m"
       cpu: 1
   env:
-    AWS_REGION: us-east-1
+    AWS_REGION: 
+      value: us-east-1
     NESSIE_HOST: 
       value: http://nessie.nessie.svc.cluster.local:19120/api/v1
     MINIO_HOST: 
