@@ -9,6 +9,7 @@ spec:
   flinkConfiguration:
     taskmanager.numberOfTaskSlots: "2"
     s3.path.style.access: "true"
+    fs.s3a.path.style.access: "true"
   serviceAccount: flink
   podTemplate:
     spec:
