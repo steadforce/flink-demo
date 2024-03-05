@@ -17,12 +17,12 @@ flink:
       value: http://nessie.nessie.svc.cluster.local:19120/api/v1
     MINIO_HOST: 
       value: http://minio.minio.svc.cluster.local:80
-    MINIO_ACCESS_KEY: 
+    AWS_ACCESS_KEY_ID: 
       valueFrom:
         secretKeyRef:
           name: minio-cred-secret-mirror
           key: accesskey
-    MINIO_SECRET_KEY:
+    AWS_SECRET_ACCESS_KEY:
       valueFrom:
         secretKeyRef:
           name: minio-cred-secret-mirror
@@ -41,7 +41,7 @@ flink:
       name: flink
   job:
     name: kafka-to-iceberg-job
-    uri: https://github.com/steadforce/flink-job/releases/download/24/flink_job-1.0-SNAPSHOT.jar
+    uri: https://github.com/steadforce/flink-job/releases/download/26/flink_job-1.0-SNAPSHOT.jar
     parallelism: 1
     upgradeMode: stateless
 
