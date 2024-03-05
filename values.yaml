@@ -29,6 +29,8 @@ flink:
           key: secretkey
     WAREHOUSE: 
       value: s3a://sensor/flink
+    S3_PATH_STYLE_ACCESS:
+      value: true
   rbac:
     labels:
       app.kubernetes.io/name: flink-kubernetes-operator
