@@ -9,7 +9,7 @@ spec:
   flinkConfiguration:
     taskmanager.numberOfTaskSlots: "2"
     s3.path.style.access: "true"
-    fs.s3a.path.style.access: "true"
+    s3.endpoint: "http://minio.minio.svc.cluster.local:80"
   serviceAccount: flink
   podTemplate:
     spec:

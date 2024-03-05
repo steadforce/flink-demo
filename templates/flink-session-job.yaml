@@ -5,8 +5,6 @@ metadata:
   name: {{ .Values.flink.job.name }}
 spec:
   deploymentName: {{ .Values.flink.name }}
-  flinkConfiguration:
-    s3.path.style.access: "true"
   job:
     jarURI: {{ .Values.flink.job.uri}}
     parallelism:  {{ .Values.flink.job.parallelism}}
