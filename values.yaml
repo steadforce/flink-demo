@@ -11,6 +11,8 @@ flink:
       memory: "2048m"
       cpu: 1
   env:
+    ENABLE_BUILT_IN_PLUGINS:
+      value: flink-s3-fs-hadoop-1.18.1.jar
     AWS_REGION: 
       value: us-east-1
     NESSIE_HOST: 
