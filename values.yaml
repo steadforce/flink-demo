@@ -16,15 +16,9 @@ flink:
     NESSIE_HOST: 
       value: http://nessie.nessie.svc.cluster.local:19120/api/v1
     AWS_ACCESS_KEY_ID: 
-      valueFrom:
-        secretKeyRef:
-          name: steadops-playground-bucket-user-mirror
-          key: accesskey
-    AWS_SECRET_ACCESS_KEY:
-      valueFrom:
-        secretKeyRef:
-          name: steadops-playground-bucket-user-mirror
-          key: secretkey
+      value: LLKhAHBakJ7d8HoS
+    AWS_SECRET_ACCESS_KEY: 
+      value: aewPMf5OiTzxKFFGPkxQYppkCjJPxGLq
     WAREHOUSE: 
       value: s3a://steadops-playground-bucket/flink
   rbac:
