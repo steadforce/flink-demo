@@ -30,7 +30,7 @@ flink:
           name: steadops-playground-bucket-user-mirror
           key: secretkey
     WAREHOUSE: 
-      value: s3a://steadops-playground-bucket/flink
+      value: s3a://steadops-playground-bucket
   rbac:
     labels:
       app.kubernetes.io/name: flink-kubernetes-operator
