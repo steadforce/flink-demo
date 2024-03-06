@@ -17,12 +17,12 @@ flink:
       value: us-east-1
     NESSIE_HOST: 
       value: http://nessie.nessie.svc.cluster.local:19120/api/v1
-    MINIO_ROOT_USER: 
+    AWS_ACCESS_KEY_ID: 
       valueFrom:
         secretKeyRef:
           name: steadops-playground-bucket-user-mirror
           key: accesskey
-    MINIO_ROOT_PASSWORD:
+    AWS_SECRET_ACCESS_KEY:
       valueFrom:
         secretKeyRef:
           name: steadops-playground-bucket-user-mirror
