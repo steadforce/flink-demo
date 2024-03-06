@@ -17,6 +17,8 @@ flink:
       value: us-east-1
     NESSIE_HOST: 
       value: http://nessie.nessie.svc.cluster.local:19120/api/v1
+    S3_ENDPOINT:
+      value: http://minio.minio.svc.cluster.local:80
     AWS_ACCESS_KEY_ID: 
       valueFrom:
         secretKeyRef:
