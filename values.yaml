@@ -47,7 +47,7 @@ flink:
       name: flink
   job:
     name: kafka-to-iceberg-job
-    uri: https://github.com/steadforce/flink-job/releases/download/25/flink_job-1.0-SNAPSHOT.jar
+    uri: https://github.com/steadforce/flink-job/releases/download/32/flink_job-1.0-SNAPSHOT.jar
     parallelism: 1
     upgradeMode: stateless
 
