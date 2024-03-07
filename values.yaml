@@ -1,5 +1,5 @@
 flink:
-  image: ghcr.io/steadforce/applications/flink-steadforce:sha-edfb702
+  image: ghcr.io/steadforce/applications/flink-steadforce:sha-87c9576
   version: v1_18
   name: flink-session-cluster
   jobManager:
@@ -20,15 +20,23 @@ flink:
     AWS_ACCESS_KEY_ID: 
       valueFrom:
         secretKeyRef:
-          name: minio-cred-secret-mirror
+          name: steadops-playground-bucket-user-mirror
           key: accesskey
     AWS_SECRET_ACCESS_KEY:
       valueFrom:
         secretKeyRef:
-          name: minio-cred-secret-mirror
+          name: steadops-playground-bucket-user-mirror
           key: secretkey
     WAREHOUSE: 
       value: s3://steadops-playground-bucket/steadops-playground-bucket
+    KAFKA_BOOTSTRAP_SERVERS:
+      value: kafka-kafka-bootstrap.kafka.svc.cluster.local:9092
+    KAFKA_TOPIC:
+      value: steadforce.tools
+    KAFKA_SCHEMA_REGISTRY_URL:
+      value: http://kafka-schema-registry.kafka.svc.cluster.local:8081
+    KAFKA_CONSUMER_GROUP:
+      value: demo-consumer-group
   rbac:
     labels:
       app.kubernetes.io/name: flink-kubernetes-operator
@@ -41,7 +49,7 @@ flink:
       name: flink
   job:
     name: kafka-to-iceberg-job
-    uri: https://github.com/steadforce/flink-job/releases/download/42/flink_job-1.0-SNAPSHOT.jar
+    uri: https://github.com/steadforce/flink-job/releases/download/45/flink_job-1.0-SNAPSHOT.jar
     parallelism: 1
     upgradeMode: stateless
 
