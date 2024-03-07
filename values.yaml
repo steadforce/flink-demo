@@ -1,5 +1,5 @@
 flink:
-  image: ghcr.io/steadforce/steadops/workbenches/flink-steadforce:sha-539c388
+  image: alexmerced/iceberg-flink-1.3.1
   version: v1_18
   name: flink-session-cluster
   jobManager:
@@ -11,8 +11,6 @@ flink:
       memory: "2048m"
       cpu: 1
   env:
-    ENABLE_BUILT_IN_PLUGINS:
-      value: flink-s3-fs-hadoop-1.18.1.jar
     AWS_REGION: 
       value: us-east-1
     NESSIE_HOST: 
@@ -30,7 +28,9 @@ flink:
           name: steadops-playground-bucket-user-mirror
           key: secretkey
     WAREHOUSE: 
-      value: s3a://steadops-playground-bucket
+      value: s3://steadops-playground-bucket
+    S3_PATH_STYLE_ACCESS:
+      value: true
   rbac:
     labels:
       app.kubernetes.io/name: flink-kubernetes-operator
