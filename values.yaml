@@ -20,12 +20,12 @@ flink:
     AWS_ACCESS_KEY_ID: 
       valueFrom:
         secretKeyRef:
-          name: steadops-playground-bucket-user-mirror
+          name: minio-cred-secret-mirror
           key: accesskey
     AWS_SECRET_ACCESS_KEY:
       valueFrom:
         secretKeyRef:
-          name: steadops-playground-bucket-user-mirror
+          name: minio-cred-secret-mirror
           key: secretkey
     WAREHOUSE: 
       value: s3://steadops-playground-bucket
