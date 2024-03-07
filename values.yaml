@@ -29,8 +29,6 @@ flink:
           key: secretkey
     WAREHOUSE: 
       value: s3://steadops-playground-bucket/steadops-playground-bucket
-    S3_PATH_STYLE_ACCESS:
-      value: "true"
   rbac:
     labels:
       app.kubernetes.io/name: flink-kubernetes-operator
