@@ -28,7 +28,7 @@ flink:
           name: minio-cred-secret-mirror
           key: secretkey
     WAREHOUSE: 
-      value: s3://steadops-playground-bucket
+      value: s3://steadops-playground-bucket/steadops-playground-bucket
     S3_PATH_STYLE_ACCESS:
       value: "true"
   rbac:
