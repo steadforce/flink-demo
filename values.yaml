@@ -1,5 +1,5 @@
 flink:
-  image: ghcr.io/steadforce/applications/flink-steadforce:sha-87c9576
+  image: ghcr.io/steadforce/applications/flink-steadforce:sha-3cced9d
   version: v1_18
   name: flink-session-cluster
   jobManager:
