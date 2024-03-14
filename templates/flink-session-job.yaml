@@ -3,6 +3,9 @@ apiVersion: flink.apache.org/v1beta1
 kind: FlinkSessionJob
 metadata:
   name: {{ .Values.flink.job.name }}
+  annotations:
+    # ensure that we roll out the job after the cluster
+    argocd.argoproj.io/sync-wave: "10"
 spec:
   deploymentName: {{ .Values.flink.name }}
   job:
