@@ -16,7 +16,7 @@ flink:
     NESSIE_HOST: 
       value: http://nessie.nessie.svc.cluster.local:19120/api/v1
     MINIO_HOST:
-      value: http://minio.svc.cluster.local:80
+      value: http://minio.minio.svc.cluster.local:80
     AWS_ACCESS_KEY_ID: 
       valueFrom:
         secretKeyRef:
@@ -28,7 +28,7 @@ flink:
           name: minio-cred-secret-mirror
           key: secretkey
     WAREHOUSE: 
-      value: s3://steadops-playground-bucket/steadops-playground-bucket
+      value: s3://steadops-playground-bucket
     KAFKA_BOOTSTRAP_SERVERS:
       value: kafka-kafka-bootstrap.kafka.svc.cluster.local:9092
     KAFKA_TOPIC:
