@@ -1,5 +1,5 @@
 flink:
-  image: ghcr.io/steadforce/applications/flink-steadforce:sha-243a528
+  image: flink:1.17
   version: v1_17
   name: flink-session-cluster
   jobManager:
@@ -49,7 +49,7 @@ flink:
       name: flink
   job:
     name: kafka-to-iceberg-job
-    uri: https://github.com/steadforce/flink-job/releases/download/76/flink_job-1.0-SNAPSHOT.jar
+    uri: https://github.com/steadforce/flink-job/releases/download/81/flink_job-0.0.1-all.jar
     parallelism: 1
     upgradeMode: stateless
 
